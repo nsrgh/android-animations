@@ -8,19 +8,57 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Timeline {
-    @lombok.Value
     private static class Value {
         private float value;
         private float begin;
         private float end;
         private TimeInterpolator interpolator;
+
+        public Value(float value, float begin, float end, TimeInterpolator interpolator) {
+            this.value = value;
+            this.begin = begin;
+            this.end = end;
+            this.interpolator = interpolator;
+        }
+
+        public float getValue() {
+            return this.value;
+        }
+
+        public float getBegin() {
+            return this.begin;
+        }
+
+        public float getEnd() {
+            return this.end;
+        }
+
+        public TimeInterpolator getInterpolator() {
+            return this.interpolator;
+        }
     }
 
-    @lombok.Value
     private static class Param {
         private String name;
         private float initialValue;
         private List<Value> values = new ArrayList<>();
+
+        public Param(String name, float initialValue) {
+            this.name = name;
+            this.initialValue = initialValue;
+        }
+
+        public String getName() {
+            return this.name;
+        }
+
+        public float getInitialValue() {
+            return this.initialValue;
+        }
+
+        public List<Value> getValues() {
+            return this.values;
+        }
     }
 
     private List<Param> params = new ArrayList<>();
