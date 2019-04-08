@@ -13,6 +13,6 @@ and this
 ```groovy
 dependencies {
     ...
-    compile 'com.github.nsrgh:android-animations:0.22'
+    implementation 'com.github.nsrgh:android-animations:0.22'
 }
 ```
