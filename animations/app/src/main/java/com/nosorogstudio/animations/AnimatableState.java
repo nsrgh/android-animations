@@ -7,10 +7,10 @@ import android.view.View;
 import android.view.animation.Interpolator;
 
 import com.nosorogstudio.animations.util.Lambda;
+import com.nosorogstudio.animations.util.Objects;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 public class AnimatableState<T> {
 
